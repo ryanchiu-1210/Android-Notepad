@@ -96,9 +96,9 @@ class MainActivity : ComponentActivity() {
                 onValueChange = { newTitle ->
                     title = newTitle
                     // 輸入時自動儲存到 DataStore
-                    scope.launch {
+                    /*scope.launch {
                         noteDataStore.saveNote(title, content)
-                    }
+                    }*/
                 },
                 label = { Text("title") },
                 singleLine = true,
@@ -111,9 +111,9 @@ class MainActivity : ComponentActivity() {
                 onValueChange = { newContent ->
                     content = newContent
                     // 輸入時自動儲存到 DataStore
-                    scope.launch {
+                    /*scope.launch {
                         noteDataStore.saveNote(title, content)
-                    }
+                    }*/
                 },
                 label = { Text("Enter...") },
                 modifier = Modifier
