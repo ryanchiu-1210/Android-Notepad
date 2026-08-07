@@ -120,6 +120,16 @@ class MainActivity : ComponentActivity() {
                     .fillMaxWidth()
                     .weight(1f)
             )
+            Button(
+                onClick={
+                    scope.launch {
+                        noteDataStore.saveNote(title,content)
+                    }
+                },
+                modifier=Modifier.fillMaxWidth()
+            ){
+                Text("Save")
+            }
 
             // 清空按鈕
             Button(
@@ -133,7 +143,7 @@ class MainActivity : ComponentActivity() {
                 },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("清空內容")
+                Text("Clear")
             }
 
         }
